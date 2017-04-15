@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Google カレンダー 予定追加 URL作成</h1>
+      <p>Fill the form and press the button to generate the URL.</p>
+      <form>
+        <!-- dates from/to  -->
+        <div class="form-group row">
+          <div class="col-xs-6">
+            <label for="from">From</label>
+          </div>
+          <div class="col-xs-6">
+            <label for="to">To</label>
+          </div>
+          <div class="col-xs-6">
+            <div class='input-group date' id='from_wrap'>
+              <input id="from" name="from" type="text" class="form-control" />
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class='input-group date' id='to_wrap'>
+              <input id="to" name="to" type="text" class="form-control" />
+              <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- title  -->
+        <div class="form-group">
+          <label for="text">Title</label>
+          <input id="text" name="text" type="text" class="form-control" />
+        </div>
+        <!-- location  -->
+        <div class="form-group">
+          <label for="location">Where</label>
+          <input id="location" name="location" type="text" class="form-control" />
+        </div>
+        <!-- details -->
+        <div class="form-group">
+          <label for="details">Description</label>
+          <textarea name="details" id="details" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <!-- submit -->
+        <div class="form-group text-center">
+          <input type="submit" value="Generate URL" class="btn btn-info" />
+        </div>
+      </form>
+      <!-- result -->
+      <div class="well">
+        <p>Result:</p>
+        <a id="result" target="_blank" href="">none</a>
+      </div>
+    </div>
+  </body>
+</html>
